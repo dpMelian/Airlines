@@ -18,7 +18,6 @@ public class PremiumCustomer implements ICustomer {
 		}
 		this.kilometersFlown = kilometersFlown;
 	}
-	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -34,14 +33,9 @@ public class PremiumCustomer implements ICustomer {
 	public void setKilometersFlown(int kilometersFlown) {
 		this.kilometersFlown = kilometersFlown;
 	}
-	public static void main(String[] args) {
-		PremiumCustomer premiumCustomer = new PremiumCustomer("Daniel", "Perez", "1234567890", 3600);
-		System.out.print("Customer name: ");
-		System.out.println(premiumCustomer.getFirstName());
-		System.out.print("Customer surname: ");
-		System.out.println(premiumCustomer.getSurname());
-		System.out.print("Customer ID number: ");
-		System.out.println(premiumCustomer.getIdNumber());
-		
+	@Override
+	public String toString() {
+		String s = firstName + ", " + surname + ", " + idNumber + ", " + kilometersFlown;
+		return s;
 	}
 }
