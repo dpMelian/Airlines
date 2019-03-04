@@ -11,11 +11,10 @@ public class ConsoleManager {
 		IRegister iRegister = new Register();
 		AddCustomer addCustomer = new AddCustomer(iRegister);
 		SetKilometersFlown setKilometersFlown = new SetKilometersFlown();
-		addCustomer.add();
 		while(true) {
-			System.out.println("What do you want to do? (enter S to show customer list, enter C to change km flown, A to add new Customer)");
+			System.out.println("What do you want to do? (enter S to show customer list, enter C to change km flown, A to add new customer)");
 			
-			switch(scanner.nextLine()) {
+			switch(scanner.next()) {
 				case "S":
 					System.out.println(iRegister.getCustomerList());
 					break;
@@ -23,6 +22,7 @@ public class ConsoleManager {
 					setKilometersFlown.changeKilometersFlown(iRegister);
 					break;
 				case "A":
+					System.out.println("***Registrate new customer***");
 					addCustomer.add();
 					break;
 			}

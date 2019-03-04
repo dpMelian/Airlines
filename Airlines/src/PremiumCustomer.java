@@ -9,6 +9,9 @@ public class PremiumCustomer implements ICustomer {
 	private int kilometersFlown;
 	
 	public PremiumCustomer(String firstName, String surname, String idNumber, int kilometersFlown) {
+		if(firstName.isEmpty() || surname.isEmpty() || idNumber.isEmpty()) {
+			throw new IllegalArgumentException("One or more fields are empty");
+		}
 		this.firstName = firstName;
 		this.surname = surname;
 		if(idNumber.matches("[0-9]+") && idNumber.length() == 10) {

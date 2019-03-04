@@ -12,8 +12,6 @@ public class AddCustomer {
 		this.iRegister = iRegister;
 	}
 	public void add() {
-		
-		System.out.println("***Registrate new customer***");
 		System.out.print("First name: ");
 		String firstName = scanner.nextLine();
 		
@@ -25,8 +23,9 @@ public class AddCustomer {
 		
 		System.out.print("Kilometers flown: ");
 		int kilometersFlown = scanner.nextInt();
+		scanner.nextLine();
 		
 		iRegister.add(new PremiumCustomer(firstName, surname, idNumber, kilometersFlown));
-		System.out.println("Client registered");
+		System.out.println("Customer registered");
 	}
 }
