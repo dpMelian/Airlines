@@ -1,19 +1,19 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 /**
  * @author dpMelian
  */
 
 public class Register implements IRegister {
-	LinkedList<ICustomer> customerLinkedList;
+	ArrayList<ICustomer> customerArrayList;
 	
 	public Register() {
-		customerLinkedList = new LinkedList<ICustomer>();
+		customerArrayList = new ArrayList<ICustomer>();
 	}
-	public LinkedList<ICustomer> getCustomerList() {
-		return this.customerLinkedList;
+	public ArrayList<ICustomer> getCustomerList() {
+		return customerArrayList;
 	}
 	public void add(ICustomer customer) {
-		this.customerLinkedList.add(customer);
+		this.customerArrayList.add(customer);
 	}
 }

@@ -10,7 +10,7 @@ public class PremiumCustomer implements ICustomer {
 	
 	public PremiumCustomer(String firstName, String surname, String idNumber, int kilometersFlown) {
 		if(firstName.isEmpty() || surname.isEmpty() || idNumber.isEmpty()) {
-			throw new IllegalArgumentException("One or more fields are empty");
+			throw new IllegalArgumentException("One or more fields are empty.");
 		}
 		this.firstName = firstName;
 		this.surname = surname;
@@ -38,7 +38,7 @@ public class PremiumCustomer implements ICustomer {
 	}
 	@Override
 	public String toString() {
-		String s = firstName + ", " + surname + ", " + idNumber + ", " + kilometersFlown;
-		return s;
+		return "PremiumCustomer [firstName=" + firstName + ", surname=" + surname + ", idNumber=" + idNumber
+				+ ", kilometersFlown=" + kilometersFlown + "]";
 	}
 }

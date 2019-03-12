@@ -1,10 +1,10 @@
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 /**
  * @author dpMelian
  */
 
 public interface IRegister {
-	LinkedList<ICustomer> getCustomerList();
+	ArrayList<ICustomer> getCustomerList();
 	void add(ICustomer customer);
 }

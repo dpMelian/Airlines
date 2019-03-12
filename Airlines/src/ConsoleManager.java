@@ -12,7 +12,8 @@ public class ConsoleManager {
 		AddCustomer addCustomer = new AddCustomer(iRegister);
 		SetKilometersFlown setKilometersFlown = new SetKilometersFlown();
 		while(true) {
-			System.out.println("What do you want to do? (enter S to show customer list, enter C to change km flown, A to add new customer)");
+			System.out.println("What do you want to do? (enter S to show customer list,"
+					+ " enter C to change km flown, A to add new customer)");
 			
 			switch(scanner.next()) {
 				case "S":
