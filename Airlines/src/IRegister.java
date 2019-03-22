@@ -7,4 +7,5 @@ import java.util.ArrayList;
 public interface IRegister {
 	ArrayList<ICustomer> getCustomerList();
 	void add(ICustomer customer);
+	void setKilometersFlown(int kilometersFlown);
 }

@@ -1,17 +1,9 @@
 import java.util.Scanner;
 
-/**
- * @author dpMelian
- */
-
-public class AddCustomer {
-	Scanner scanner = new Scanner(System.in);
-	IRegister iRegister;
+public class CustomerConsoleParser {
+	private static Scanner scanner = new Scanner(System.in);
 	
-	public AddCustomer(IRegister iRegister) {
-		this.iRegister = iRegister;
-	}
-	public void add() {
+	public static ICustomer parsePremiumCustomer() {
 		System.out.print("First name: ");
 		String firstName = scanner.nextLine();
 		
@@ -25,7 +17,6 @@ public class AddCustomer {
 		int kilometersFlown = scanner.nextInt();
 		scanner.nextLine();
 		
-		iRegister.add(new PremiumCustomer(firstName, surname, idNumber, kilometersFlown));
-		System.out.println("Customer registered");
+		return new PremiumCustomer(firstName, surname, idNumber, kilometersFlown);		
 	}
 }
