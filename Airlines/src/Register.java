@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 /**
@@ -7,29 +7,28 @@ import java.util.Scanner;
 
 public class Register implements IRegister {
 	Scanner scanner = new Scanner(System.in);
-	ArrayList<ICustomer> customerArrayList = new ArrayList<ICustomer>();
+	HashMap<Integer, ICustomer> customerHashMap = new HashMap<Integer, ICustomer>();
 	
 	@Override
 	public void add(ICustomer customer) {
-		this.customerArrayList.add(customer);
+		Integer integer = new Integer(customer.getIdNumber());
+		this.customerHashMap.put(integer, customer);
 		System.out.println("Customer registered");
 	}
 	
 	@Override
-	public ArrayList<ICustomer> getCustomerList() {
-		return customerArrayList;
+	public HashMap<Integer, ICustomer> getCustomerList() {
+		return customerHashMap;
 	}
 	
 	@Override
 	public void setKilometersFlown(int kilometersFlown) {
 		System.out.println("Enter customer's ID number: ");
-		String id = scanner.nextLine();
+		int id = scanner.nextInt();
+		Integer integer = new Integer(id);
 		
-		for(ICustomer i : this.customerArrayList) {
-			if(i.getIdNumber().equals(id)) {
-				i.setKilometersFlown(kilometersFlown);
-				System.out.println("Kilometers flown were successfully changed.");
-			}
-		}
+		customerHashMap.get(integer).setKilometersFlown(kilometersFlown);
+			
+		System.out.println("Kilometers flown were successfully changed.");
 	}
 }

@@ -11,7 +11,7 @@ public class CustomerConsoleParser {
 		String surname = scanner.nextLine();
 		
 		System.out.print("ID number: ");
-		String idNumber = scanner.nextLine();
+		int idNumber = scanner.nextInt();
 		
 		System.out.print("Kilometers flown: ");
 		int kilometersFlown = scanner.nextInt();

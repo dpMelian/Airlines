@@ -7,7 +7,7 @@ public interface ICustomer {
 	
 	String getFirstName();
 	String getSurname();
-	String getIdNumber();
+	int getIdNumber();
 	
 	int getKilometersFlown();
 }

@@ -1,11 +1,11 @@
-import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * @author dpMelian
  */
 
 public interface IRegister {
-	ArrayList<ICustomer> getCustomerList();
+	HashMap<Integer, ICustomer> getCustomerList();
 	void add(ICustomer customer);
 	void setKilometersFlown(int kilometersFlown);
 }

@@ -2,13 +2,13 @@
  * @author dpMelian
  */
 
-public class PremiumCustomer implements ICustomer {
+public class RegularCustomer implements ICustomer {
 	private final String firstName;
 	private final String surname;
 	private final int idNumber;
 	private int kilometersFlown;
 	
-	public PremiumCustomer(String firstName, String surname, int idNumber, int kilometersFlown) {
+	public RegularCustomer(String firstName, String surname, int idNumber, int kilometersFlown) {
 		if(firstName.isEmpty() || surname.isEmpty()) {
 			throw new IllegalArgumentException("One or more fields are empty.");
 		}
@@ -38,7 +38,7 @@ public class PremiumCustomer implements ICustomer {
 	}
 	@Override
 	public String toString() {
-		return "PremiumCustomer [firstName=" + firstName + ", surname=" + surname + ", idNumber=" + idNumber
+		return "RegularCustomer [firstName=" + firstName + ", surname=" + surname + ", idNumber=" + idNumber
 				+ ", kilometersFlown=" + kilometersFlown + "]";
 	}
 }
